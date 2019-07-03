@@ -29,7 +29,7 @@ public class FillTheBlankQuestion extends Question {
     @Override
     public boolean readInputAndCheckAnswer(Scanner input){
 
-        System.out.println("Enter response here: ");
+        System.out.print("Enter response here: ");
         String in = input.nextLine();
         return checkAnswer(in);
     }

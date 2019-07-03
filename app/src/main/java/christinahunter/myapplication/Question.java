@@ -27,6 +27,10 @@ public class Question
         mText = text;
     }
 
+    public boolean isMultipleChoiceQuestion(){
+        return false;
+    }
+
     //stub method - intentionally does nothing
     public boolean checkAnswer(boolean ans){
         return false;
@@ -41,4 +45,6 @@ public class Question
     public boolean readInputAndCheckAnswer(Scanner input) {
         return false;
     }
+
+
 }
