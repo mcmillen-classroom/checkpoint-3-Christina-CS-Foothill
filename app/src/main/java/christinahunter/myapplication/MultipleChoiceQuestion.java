@@ -15,7 +15,7 @@ public class MultipleChoiceQuestion extends Question {
 
     String getOptions(){
         String result = "";
-        char letter = 'a';
+        char letter = 'A';
         for(int i = 0; i < mOptions.length; i++){
             if( i < (mOptions.length - 1))
                result += letter + ". " + mOptions[i] + '\n';
@@ -43,7 +43,9 @@ public class MultipleChoiceQuestion extends Question {
     }
 
     public boolean checkAnswer(char ans){
-        return (ans == mAnswer);
+
+        //uppercase and lowercase chars are 32 ascii positions apart
+        return (ans == mAnswer) || (ans == (mAnswer - 32));
     }
 
     @Override
